@@ -1,0 +1,125 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[style=numeric-comp]{biblatex}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+}
+\bibliography{cite}
+
+\title{Best Practices for a Future Open Code Policy for NASA Space Science \\
+Response to a Call for White Papers}
+\author{Alexander Reustle}
+\begin{document}
+\begin{center}
+\large {Best Practices for a Future Open Code Policy for NASA Space Science \\
+Response to a call for White Papers}
+\\
+\normalsize {Alexander Reustle}
+
+\end{center}
+
+  \begin{abstract}
+  Open source code is better code, as it can use the many free tools and services
+  now available to the open source community. Access to these tools helps
+  teams easily follow best practices for creating, testing, and
+  distributing scientific software.
+  \end{abstract}
+
+  % \section*{Background}
+  % I am a scientific software developer at the Goddard Spaceflight Center working
+  % on the SESDA-4 (Space and Earth Science Data Analysis) contract for INNOVIM.
+  % My exclusive task is to support the Fermi Science Support Center, maintaining
+  % our open data archive and developing science analysis software for the Fermi
+  % LAT collaboration. I have six years experience working in this role for Fermi.
+
+  In recent years the popularity of open source software and the infrastructure
+  to support it has grown phenomenally. Companies now provide
+  services for free to open source code-bases. These services enable
+  teams to follow best practices for software development with a minimal
+  investment in time, money, and other resources. This brief white paper will
+  enumerate a selection of these services and describe how they can benefit
+  scientific software development. Each tool is free to use for open
+  source projects and teams. While many of the practices described are
+  achievable with closed source solutions, none of them are as cheap, fast and
+  low-maintenance as their open source alternatives. Some can especially
+  benefit code written in academic environments. Even those with NASA funding
+  often lack the resources that NASA internal teams have access to. If our goal
+  is safer, better, faster, cheaper then open source science code is the way to
+  achieve it.
+
+  \section*{\small Github}
+
+  Github\cite{github} is a service that enables developers to save, organize,
+  and share open source code for free online. It is a website interface to the
+  popular git version control system and enables the following:
+  \begin{itemize}
+      \item Source code can be easily shared among teams without the need to
+        set up and maintain an expensive web server. This enables free and
+        easy collaboration.
+      \item Published results can reference a tag of the code at a specific
+        state, which will never change. Other researchers can replicate past
+        findings using that tag,  while the development team makes further
+        changes.
+      \item Users of the code can contribute to future development by providing
+        their own changes, while the owner of the code-base retains ultimate
+        control over what is included.
+      \item Owners retain full control over official code-bases and can migrate
+        to government, academic, or private alternatives to Github freely and
+        easily.
+  \end{itemize}
+
+  \section*{\small Codecov}
+
+  Testing code is crucial to producing reliable software packages,
+  but testing is tedious and often difficult. It can be hard to know whether
+  tests cover every part of the code-base, or if some parts remain untested.
+  Codecov\cite{codecov} is a service that analyzes open source projects for
+  free and reports which parts of the code base is covered by the given tests.
+
+  \section*{\small TravisCI}
+
+  Running tests is its own challenge, especially when the code
+  must be tested on many operating systems. By lowering the barriers to
+  effective testing, teams can catch more bugs and security vulnerabilities
+  before releasing code. TravisCI\cite{travisci} is one of many cloud testing
+  tools helping developers write safer, more correct and reliable code.
+  \begin{itemize}
+      \item Tests are run automatically when a change is seen on Github.
+      \item Tests are run in the cloud on multiple operating systems with no
+        human interaction needed. Teams can test on some systems they otherwise
+        cannot access.
+      \item Success and failure reports are generated automatically in an easy
+        to read format.
+  \end{itemize}
+
+  \section*{\small Conda}
+
+  Installing software of any kind on a user's machine can be a difficult task.
+  Different operating systems have different requirements, and all software
+  packages depend on other packages to run. For example, graphing code depends
+  upon a graphing library to display results. Conda\cite{conda} is a free
+  package manager for open source packages. Many other package managers exist
+  with differing strengths and weaknesses. Teams can reasonably distribute open
+  source software through more than one package manager.
+  \begin{itemize}
+      \item User installation is as easy as typing \texttt{conda install} into
+        a terminal.
+      \item Developers tell Conda which other packages their code depends on.
+        Conda installs these dependencies before installing the developer's
+        package.
+      \item Conda supports all programming languages unlike other
+        managers which focus on a single language.
+      \item Conda supports Linux, Mac, and Windows unlike other
+        managers which focus on a single Operating system.
+  \end{itemize}
+
+  \
+  NASA teams and academic collaborators alike have real opportunities to
+  benefit if we shift to a policy that permits and encourages open source
+  development. Saving money and reducing overhead will empower teams of all
+  sizes and funding levels to write better code more reliably; code that is
+  easier to share, use, and improve.
+\printbibliography
+\end{document}
+
